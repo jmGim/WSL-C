@@ -1,0 +1,33 @@
+Breakpoint 1 at 0x11e6: file watchpoint_test.c, line 21.
+Starting program: /home/iot18/project/watchpoint_test 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at watchpoint_test.c:21
+21	{
+Hardware watchpoint 2: app_data.safe_value
+Continuing.
+
+Hardware watchpoint 2: app_data.safe_value
+
+Old value = 32767
+New value = 999
+main () at watchpoint_test.c:25
+25	    printf("--- 디버깅 실습 시작 ---\n");
+Continuing.
+
+Hardware watchpoint 2: app_data.safe_value
+
+Old value = 999
+New value = 50
+corrupt_memory (data=0x7fffffffe680) at watchpoint_test.c:15
+15	    for (int i = 0; i <= 5; i++) {
+0x7fffffffe680:	0	0	0	0	10	0	0	0
+0x7fffffffe688:	20	0	0	0	30	0	0	0
+0x7fffffffe690:	40	0	0	0	50	0	0	0
+Quit

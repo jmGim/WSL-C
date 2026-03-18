@@ -1,0 +1,40 @@
+Starting program: /home/iot18/project/12-1 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 13618) exited normally]
+Breakpoint 1 at 0x555555555175: file 12-1.c, line 5.
+The program is not being run.
+Starting program: /home/iot18/project/12-1 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at 12-1.c:5
+5		char* ap = "apple";
+6		char* ap1 = "apple";
+$1 = 0x555555556008 "apple"
+$2 = 0x7fffffffdf10 "\200PUUUU"
+7		char* pear = "pear";
+$3 = 0x555555556008 "apple"
+9		pear = ap;
+$4 = 0x55555555600e "pear"
+10		printf("%s\n", ap);
+$5 = 0x555555556008 "apple"
+12		printf("apple이 저장된 시작 주소 값 : %p\n", "apple");    // 주소 값 출력
+13		printf("두 번째 문자의 주소 값 : %p\n", "apple" + 1);     // 주소 값 출력
+14		printf("첫 번째 문자 : %c\n", *"apple");                  // 간접 참조 연산
+15		printf("두 번째 문자 : %c\n", *("apple" + 1));            // 포인터 연산식
+Undefined command: "nn".  Try "help".
+16		printf("배열로 표현한 세 번째 문자 : %c\n", "apple"[2]);  // 배열 표현식
+18		return 0;
+19	}
+Download failed: Invalid argument.  Continuing without source file ./csu/../sysdeps/nptl/libc_start_call_main.h.
+__libc_start_call_main (main=main@entry=0x555555555169 <main>, argc=argc@entry=1, argv=argv@entry=0x7fffffffdf58) at ../sysdeps/nptl/libc_start_call_main.h:74
+warning: 74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+

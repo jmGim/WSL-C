@@ -1,0 +1,29 @@
+Already logging to gdb_segfault_test.txt.
+No symbol "ptr" in current context.
+The program is not being run.
+Starting program: /home/iot18/project/segfault_test 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+Downloading separate debug info for system-supplied DSO at 0x7ffff7fc3000
+[###                                                           ][ ###                                                          ]                                                                  [Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000055555555516c in update_value (ptr=0x0) at segfault_test.c:7
+7	    *ptr = 100; // ptr이 NULL이므로 여기서 Segmentation Fault 발생
+$1 = (int *) 0x0
+#0  0x000055555555516c in update_value (ptr=0x0) at segfault_test.c:7
+#1  0x00005555555551a0 in process_data (data_ptr=0x0) at segfault_test.c:14
+#2  0x00005555555551d2 in main () at segfault_test.c:24
+#1  0x00005555555551a0 in process_data (data_ptr=0x0) at segfault_test.c:14
+14	    update_value(data_ptr);
+$2 = (int *) 0x0
+#2  0x00005555555551d2 in main () at segfault_test.c:24
+24	    process_data(my_ptr); 
+my_ptr = 0x0
+Warning: 'set logging off', an alias for the command 'set logging enabled', is deprecated.
+Use 'set logging enabled off'.
+
