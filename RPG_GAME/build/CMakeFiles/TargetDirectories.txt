@@ -1,0 +1,3 @@
+/home/iot18/RPG_GAME/build/CMakeFiles/SDLGame.dir
+/home/iot18/RPG_GAME/build/CMakeFiles/edit_cache.dir
+/home/iot18/RPG_GAME/build/CMakeFiles/rebuild_cache.dir

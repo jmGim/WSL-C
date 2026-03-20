@@ -15,19 +15,19 @@ int main(void) {
     int arr[SIZE];
     clock_t start, end;
 
-    // 1~100 범위 난수 10개 생성
-    grandom(arr, 100000, 100);
+    // 1~100 범위 난수 SIZE개 생성
+    grandom(arr, SIZE, 100);
 
     // 초기 배열 출력
     printf("초기 배열: ");
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < SIZE; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
 
     // 버킷 정렬 함수로 데이터 배열과 버킷 갯수 함께 요청
     start = clock();
-    bucketsort(arr, 10, 100000);
+    bucketsort(arr, 10, SIZE);
     end = clock();
 
     // 정렬된 결과 출력
@@ -61,7 +61,7 @@ void bucketsort(int arr[], int n, int max) {
 
     // 분배
     for (int i = 0; i < n; i++) {
-        int index = (arr[i] - 1) / bucketRange;
+        int index = (arr[i] - 1) / bucketRange; // index : 1~9
         buckets[index][count[index]++] = arr[i];
     }
 

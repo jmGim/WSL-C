@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/SDLGame.dir/main.c.o -o SDLGame  /usr/lib/x86_64-linux-gnu/libSDL2.so 

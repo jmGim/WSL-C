@@ -71,8 +71,20 @@ dkms.conf
 .ssh
 .sudo_as_admin_successful
 .viminfo
+.vimrc
 
+.vscode
+.vscode-server
 
+# RPG GAME
+.dotnet
+.local
+*.bin
 
 .gitconfig
 .lesshst
+
+
+
+# Gemini
+.gemini

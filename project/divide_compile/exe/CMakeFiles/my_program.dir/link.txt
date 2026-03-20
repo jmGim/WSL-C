@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/my_program.dir/main.c.o CMakeFiles/my_program.dir/input.c.o CMakeFiles/my_program.dir/print.c.o CMakeFiles/my_program.dir/average.c.o -o my_program 
