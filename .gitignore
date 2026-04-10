@@ -80,7 +80,7 @@ dkms.conf
 .dotnet
 .local
 *.bin
-
+RPG_GAME/rhythm_game/
 .gitconfig
 .lesshst
 
@@ -88,3 +88,27 @@ dkms.conf
 
 # Gemini
 .gemini
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+CMakeUserPresets.json
+
+
+# Vim , Library install
+.asoundrc
+.bash_history-25728.tmp
+.config/
+.vim/
+.wget-hsts
+.wsl-config
+raylib/

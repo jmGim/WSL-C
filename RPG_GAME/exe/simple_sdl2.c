@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // 2. 이미지 텍스처 로드 (실행 파일과 같은 폴더에 image.png 필요)
-    SDL_Texture* texture = IMG_LoadTexture(renderer, "image.png");
+    SDL_Texture* texture = IMG_LoadTexture(renderer, "../linux_image.png");
     if (!texture) {
         printf("이미지 로드 실패: %s\n", IMG_GetError());
     }
