@@ -112,3 +112,15 @@ CMakeUserPresets.json
 .wget-hsts
 .wsl-config
 raylib/
+
+
+
+
+# folder
+qt-project/
+stm-project/
+.java/
+
+
+
+
